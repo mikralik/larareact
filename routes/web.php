@@ -14,3 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController@index');
+
+Route::get('/test', function()
+{
+     $user=DB::table('users')->get();
+     dd($users);
+});
